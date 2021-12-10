@@ -14,7 +14,7 @@ const app = express()
 app.use(express.json())
 app.use('/static', express.static('public'))
 
-app.use(userRouter)
+app.use('/user',userRouter)
 app.use('/shop', shopRouter)
 
 // app.use((req, res, next) => {
@@ -87,7 +87,6 @@ app.use('/shop', shopRouter)
 // })
 
 app.all('*', (req, res) => {
-    console.log(req.params)
     res.status(404)
     res.json({
         error: 'Page not found'
