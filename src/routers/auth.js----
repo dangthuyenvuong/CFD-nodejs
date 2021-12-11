@@ -1,0 +1,11 @@
+import { Router } from 'express'
+import authMiddleware from '../middleware/auth.middleware.js'
+import AuthController from '../controllers/auth.controller.js'
+
+const authRouter = Router()
+
+authRouter.post('/login', AuthController.login)
+authRouter.post('/refresh-token', authMiddleware, AuthController.refreshToken)
+authRouter.post('/register', AuthController.register)
+
+export default authRouter

@@ -8,6 +8,20 @@ export const User = sequelize.define('users', {
         field: 'full_name',
         allowNull: true,
     },
+    avatar: {
+        type: Sequelize.STRING,
+        field: 'avatar',
+        allowNull: true
+    },
+    email: {
+        type: Sequelize.STRING,
+        field: 'email',
+        unique: true
+    },
+    password: {
+        type: Sequelize.STRING,
+        field: 'password'
+    },
     createdAt: {
         type: Sequelize.DATE,
         field: 'created_at',
