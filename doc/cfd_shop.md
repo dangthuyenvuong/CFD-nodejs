@@ -12,6 +12,8 @@
 
 - Update info
 
+- Get profile
+
 # Product
 
 - Product
@@ -47,3 +49,9 @@
 # Promotion
 
 - POST: promotion
+
+# Wishlist
+
+
+
+http://....;http://

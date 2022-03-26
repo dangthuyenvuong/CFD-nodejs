@@ -1,0 +1,16 @@
+{
+    "generate model": {
+        "prefix": "model;llll",
+        "body": [
+            "import { Sequelize } from 'sequelize'",
+            "import { sequelize } from './base.model.js'",
+            "",
+            "export const ${1:Model} = sequelize.define('${2:table}', {",
+            "",
+            "})",
+            "",
+            "export default ${1:Model}"
+        ],
+        "description": "generate model"
+    }
+}
